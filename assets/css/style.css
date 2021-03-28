@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #fff;
+  color: #000;
   transition: 0.3s;
   font-size: 15px;
   letter-spacing: 0.5px;
@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: #37517e;
+  background: #edf2f4;
 }
 
 #hero .container {
@@ -780,6 +780,9 @@ section {
   .why-us .img {
     min-height: 200px;
   }
+  .carousel-item img {
+    min-height: 20rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -929,6 +932,9 @@ section {
 @media (max-width: 1024px) {
   .cta {
     background-attachment: scroll;
+  }
+  .carousel-item img {
+    min-height: 20rem;
   }
 }
 

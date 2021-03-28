@@ -123,8 +123,16 @@
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
+      if ($(window).width() > 991) {
+        $('nav a').addClass('text-white')
+      }
+
     } else {
       $('#header').removeClass('header-scrolled');
+      if ($(window).width() > 991) {
+        $('nav a').removeClass('text-white')
+      }
+
     }
   });
 
