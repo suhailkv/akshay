@@ -206,6 +206,33 @@
   }
   $(window).on('load', function() {
     aos_init();
+    $('.owl-carousel').owlCarousel({
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      loop: true,
+      margin: 5,
+      responsiveClass: true,
+      nav: true,
+      loop: true,
+      stagePadding: 100,
+      responsive: {
+        0: {
+          items: 1
+        },
+        568: {
+          items: 2
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+
   });
+
 
 })(jQuery);
