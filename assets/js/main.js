@@ -50,6 +50,13 @@
 
   // Activate smooth scroll on page load with hash links
   $(document).ready(function() {
+    // enginneering width changes to 1000
+    if ($(window).width() < 768) {
+      $(".engineering").css({'width':'90%'});
+    }else {
+      $(".engineering").css({'width':'70%'});
+
+    }
     if (window.location.hash) {
       var initial_nav = window.location.hash;
       if ($(initial_nav).length) {
@@ -96,6 +103,7 @@
     $(".mobile-nav, .mobile-nav-toggle").hide();
   }
 
+
   // Navigation active state on scroll
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, #mobile-nav');
@@ -123,23 +131,20 @@
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
-      if ($(window).width() > 991) {
-        $('nav a').addClass('text-white')
-      }
+      $('#header a').css({'color':'white'});
+      $('#modal-button a').css({'color':'white'});
+      $('#logo').attr('src','assets/img/Altius-shade.png');
+
 
     } else {
       $('#header').removeClass('header-scrolled');
-      if ($(window).width() > 991) {
-        $('nav a').removeClass('text-white')
-      }
+      $('#header a').css({'color':'black'});
+      $('#modal-button a').css({'color':'black'});
+      $('#logo').attr('src','assets/img/Altius.png');
+
 
     }
   });
-
-  if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');
-  }
-
   // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -231,8 +236,15 @@
         }
       }
     })
+    $(".owl-prev").html('<i class="fa fa-angle-left" style="font-size:50px; color:#fff"></i>')
+    $(".owl-next").html('<i class="fa fa-angle-right" style="font-size:50px; color:#fff"></i>')
 
   });
 
 
 })(jQuery);
+
+  // to change fixed to absolute
+  $(window).scroll(function(){
+    $("#quick-enquiry").css("top",Math.min(80,812-$(this).scrollTop()));
+});
