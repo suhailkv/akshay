@@ -49,14 +49,7 @@
   });
 
   // Activate smooth scroll on page load with hash links
-  $(document).ready(function() {
-    // enginneering width changes to 1000
-    if ($(window).width() < 768) {
-      $(".engineering").css({'width':'90%'});
-    }else {
-      $(".engineering").css({'width':'70%'});
-
-    }
+  $(document).ready(function(){
     if (window.location.hash) {
       var initial_nav = window.location.hash;
       if ($(initial_nav).length) {

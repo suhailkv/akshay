@@ -1740,7 +1740,7 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff;
+  background: #f3f5fa;
 }
 
 #footer .footer-top .footer-contact {
@@ -1840,7 +1840,7 @@ section {
 }
 
 #footer .copyright {
-  float: left;
+  text-align: center;
 }
 
 #footer .credits {
@@ -1984,6 +1984,8 @@ section {
 } */
 .modal-content{
   background: rgba(40, 58, 90, 1);
+  font-family: "Jost";
+  color: floralwhite;
 }
 .checked {
   color:orange;
@@ -2042,14 +2044,14 @@ input[type=number] {
   }
 .engineering {
   line-height: 200%;
-  width: 70%;
+  /* width: 70%; */
   float: right;
 
 }
 #Engg{
-  flex-wrap:wrap;
-  flex-direction: column;
-  align-content: center;
+  /* flex-wrap:wrap; */
+  /* flex-direction: column; */
+  /* align-content: center; */
   background: whitesmoke;
 }
 #quick-enquiry{
